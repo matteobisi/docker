@@ -6,9 +6,9 @@ This files was used during my ICONUK 2016 sessions
 
 Inside this project you will be able to find :
 
-dockerfile
-response file from IBM Installation Manager
-Response file to build the WebSphere cell using manageprofile.sh
+>dockerfile
+>response file from IBM Installation Manager
+>Response file to build the WebSphere cell using manageprofile.sh
 
 To build the image you have to download Was 9 , Was supplements , Java SDK 8  from your IBM Partnerworld profile.
 
@@ -43,8 +43,8 @@ drwxrwxr-x  2 teo teo 4096 Sep  7 10:23 RESPONSE/
 drwxrwxr-x  5 teo teo 4096 Sep  7 10:23 SDK_JAVA_V8/
 drwxrwxr-x  9 teo teo 4096 Sep  7 10:26 WAS_ND_9/
 
-the xml files are the response file obtained from IBM Installation manager to install WAS 9, HTTP, Plugin, dmgr and appserv01 are the 2 files i used to configure 
-WebSphere cell
+the xml files are the response file obtained from IBM Installation manager to install WAS 9, HTTP, Plugin,
+dmgr and appserv01 are the 2 files i used to configure the WebSphere cell
 
 teo@dubuntu:~/docker/was9/sw-repo/was9/RESPONSE$ ll
 total 24
