@@ -1,0 +1,18 @@
+FROM ubuntu:16.04
+LABEL Description="WebSphere 9, HTTP 9, Plugin 9" Vendor="MSBIRO.NET" Version="1.0"
+COPY sw-repo/* /tmp/sw-repo/
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    apt-utils \
+    vim \
+    psmisc
+RUN /tmp/sw-repo/IM185_LNX64/installc -log log_file -acceptLicense -installationDirectory /opt/ibm/im/
+RUN /opt/ibm/im/eclipse/tools/imcl input /tmp/sw-repo/RESPONSE/was9.xml -acceptLicense
+RUN /opt/ibm/im/eclipse/tools/imcl input /tmp/sw-repo/RESPONSE/was9supp.xml -acceptLicense
+RUN echo $(head -1 /etc/hosts | cut -f1) dmgr.ondemand.com >> /etc/hosts && /opt/ibm/WebSphere/AppServer/bin/manageprofiles.sh -response /tmp/sw-repo/RESPONSE/dmgr
+RUN echo $(head -1 /etc/hosts | cut -f1) dmgr.ondemand.com >> /etc/hosts && /opt/ibm/WebSphere/AppServer/bin/manageprofiles.sh -response /tmp/sw-repo/RESPONSE/appsrv01
+RUN /opt/ibm/WebSphere/AppServer/bin/wasservice.sh -add docker-DMGR -servername dmgr -profilePath /opt/ibm/WebSphere/AppServer/profiles/Dmgr01/ -stopArgs '-username waslocal -password docker' 
+RUN /opt/ibm/WebSphere/AppServer/bin/wasservice.sh -add docker-NA -servername nodeagent -profilePath  /opt/ibm/WebSphere/AppServer/profiles/AppSrv01/ -stopArgs '-username waslocal -password docker -stopservers'
+RUN mkdir /var/lock/subsys
+VOLUME ["/opt/ibm/WebSphere/AppServer"]
+EXPOSE 80 443 9060 9043 9080
+RUN rm /tmp/sw-repo -R

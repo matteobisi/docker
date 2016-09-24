@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/ibm/IMShared'/>
+  </variables>
+  <server>
+    <repository location='/tmp/sw-repo/WAS_ND_9'/>
+    <repository location='/tmp/sw-repo/WAS9-HTTP'/>
+    <repository location='/tmp/sw-repo/WAS9-SUPP'/>
+  </server>
+  <profile id='IBM HTTP Server V9.0' installLocation='/opt/ibm/HTTPServer'>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='user.ihs.http.server.service.name.key' value='IBMHTTPServerV9.0'/>
+    <data key='user.ihs.http.server.service.name' value='IBM HTTP Server V9.0'/>
+    <data key='user.ihs.allowNonRootSilentInstall' value='true'/>
+    <data key='user.ihs.installHttpService' value='false'/>
+    <data key='user.ihs.httpPort' value='80'/>
+  </profile>
+  <install>
+    <!-- IBM HTTP Server per WebSphere Application Server 9.0.0.0 -->
+    <offering profile='IBM HTTP Server V9.0' id='com.ibm.websphere.IHS.v90' version='9.0.0.20160526_1854' features='core.feature'/>
+    <!-- IBM SDK, Java Technology Edition, Versione 8 8.0.3.0 -->
+    <offering profile='IBM HTTP Server V9.0' id='com.ibm.java.jdk.v8' version='8.0.3000.20160526_1317' features='com.ibm.sdk.8'/>
+  </install>
+  <profile id='Plug-in server Web per IBM WebSphere Application Server V9.0' installLocation='/opt/ibm/Plugins'>
+    <data key='cic.selector.arch' value='x86_64'/>
+  </profile>
+  <install>
+    <!-- Plug-in server Web per IBM WebSphere Application Server 9.0.0.0 -->
+    <offering profile='Plug-in server Web per IBM WebSphere Application Server V9.0' id='com.ibm.websphere.PLG.v90' version='9.0.0.20160526_1854' features='core.feature'/>
+    <!-- IBM SDK, Java Technology Edition, Versione 8 8.0.3.0 -->
+    <offering profile='Plug-in server Web per IBM WebSphere Application Server V9.0' id='com.ibm.java.jdk.v8' version='8.0.3000.20160526_1317' features='com.ibm.sdk.8'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+  <preference name='offering.service.repositories.areUsed' value='false'/>
+</agent-input>
