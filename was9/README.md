@@ -21,24 +21,20 @@ Inside every folder i've put the extracted software
 
 teo@dubuntu:~/docker/was9$ ll
 
-
-
 df-was9
-sw-repo/
-
+sw-repo
 
 teo@dubuntu:~/docker/was9/sw-repo$ ll
 
-was9/
-was-sup/
-
+was9
+was-sup
 
 teo@dubuntu:~/docker/was9/sw-repo/was9$ ll
 
-IM185_LNX64/
-RESPONSE/
-SDK_JAVA_V8/
-WAS_ND_9/
+IM185_LNX64
+RESPONSE
+SDK_JAVA_V8
+WAS_ND_9
 
 the xml files are the response file obtained from IBM Installation manager to install WAS 9, HTTP, Plugin,
 dmgr and appserv01 are the 2 files i used to configure the WebSphere cell
@@ -53,5 +49,5 @@ was9.xml
 
 teo@dubuntu:~/docker/was9/sw-repo/was-sup$ ll
 
-WAS9-HTTP/
-WAS9-SUPP/
+WAS9-HTTP
+WAS9-SUPP
