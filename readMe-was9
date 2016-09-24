@@ -1,0 +1,21 @@
+This files contains some how to , to be able to build your own was9 image with a websphere cell configured.
+This docker file named df-was9 is the one used during my live demo @ICONUK 2016
+
+
+This is the ls of the working dir
+df-was9 is the docker file , sw-repo contains the sw
+
+
+-rw-rw-r-- 1 teo teo 1378 Sep 15 18:39 df-was9
+drwxrwxr-x 4 teo teo 4096 Sep  7 10:21 sw-repo/
+
+
+teo@dubuntu:~/docker/was9/sw-repo$ ll
+total 16
+drwxrwxr-x 4 teo teo 4096 Sep  7 10:21 ./
+drwxrwxr-x 3 teo teo 4096 Sep 15 18:39 ../
+drwxrwxr-x 6 teo teo 4096 Sep  7 10:23 was9/
+drwxrwxr-x 4 teo teo 4096 Sep  7 10:21 was-sup/
+
+this is the directory listing of 
+
