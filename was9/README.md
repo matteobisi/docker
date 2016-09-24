@@ -1,5 +1,9 @@
-Inside this readme i describe the folder structure to use the dockerfile to build a was 9 image and configure the cell during the image build.
-This files was used during my ICONUK 2016 sessions (slides available http://www.slideshare.net/mbisi/docker-how-to-deploy-digital-experience-in-a-container-drinking-a-cup-of-coffee )
+Inside this readme i describe the folder structure to use the dockerfile to build a was 9 image and configure the cell during the 
+image build.
+
+This files was used during my ICONUK 2016 sessions 
+(slides available http://www.slideshare.net/mbisi/docker-how-to-deploy-digital-experience-in-a-container-drinking-a-cup-of-coffee )
+
 Inside this project you will be able to find :
 
 dockerfile
@@ -14,7 +18,8 @@ This is the folder structure , df-was9 is the dockerfile and sw-repo is the root
 Inside every folder i've put the extracted software
 
 teo@dubuntu:~/docker/was9$ ll
-total 16
+
+
 drwxrwxr-x 3 teo teo 4096 Sep 15 18:39 ./
 drwxrwxr-x 4 teo teo 4096 Sep 15 17:21 ../
 -rw-rw-r-- 1 teo teo 1378 Sep 15 18:39 df-was9
