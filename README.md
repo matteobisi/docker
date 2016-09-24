@@ -1,7 +1,7 @@
 # docker
 my docker files !
 
-Here you can find some of my docker file that you can use as sample to build your container
+Here you can find some of my docker files that you can use as sample to build your container
 
 ##Domino
 Here the tree list of the folder structure for domino image creation
