@@ -1,0 +1,12 @@
+create
+profileName=Dmgr01
+profilePath=/opt/ibm/WebSphere/AppServer/profiles/Dmgr01
+templatePath=/opt/ibm/WebSphere/AppServer/profileTemplates/cell/dmgr
+nodeName=DockerNode
+cellName=DockerCell
+enableAdminSecurity=true
+adminUserName=waslocal
+adminPassword=docker
+hostName=dmgr.ondemand.com
+appServerNodeName=DockerNodeName
+nodeProfilePath=/opt/ibm/WebSphere/AppServer/profiles/AppSrv01
