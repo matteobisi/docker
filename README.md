@@ -29,3 +29,6 @@ drwxrwxr-x 2 teo teo 4096 Feb  2 17:36 serverconfig/
 ```
 
 that contains the software setup folder uncompressed 
+
+@@@@@@@@@@
+I Keep this repo here for historycal reason but if you have to play with Domino and Docker please visit https://github.com/IBM/domino-docker
